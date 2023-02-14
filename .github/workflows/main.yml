@@ -35,7 +35,7 @@ jobs:
       - name: FTP-Deploy-Action
         uses: SamKirkland/FTP-Deploy-Action@4.3.3
         with:
-          server: ftp.107.178.101.189
+          server: ftp.kathmandudaytrips-admin.alagpath.com
           username: admin@kathmandudaytrips-admin.alagpath.com
           password: ${{ secrets.PRODUCTION_KATHMANDUDAYTRIPS }}
           local-dir: build/
