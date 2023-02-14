@@ -36,7 +36,7 @@ jobs:
         uses: SamKirkland/FTP-Deploy-Action@4.2.0
         with:
           server: ftp.prayashshrestha.com.np
-          username: admin@kathmandudaytrips-admin.alagpath.com
+          username: admin@kathmandudaytrips.alagpath.com
           password: ${{ secrets.PRODUCTION_KATHMANDUDAYTRIPS }}
           local-dir: build/
           protocol: ftps
