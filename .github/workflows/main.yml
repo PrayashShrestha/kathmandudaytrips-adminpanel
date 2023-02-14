@@ -16,10 +16,10 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
 
       - name: Use Node.js 16.17.1
-        uses: actions/setup-node@v2
+        uses: actions/setup-node@v4
         with:
           node-version: "16.17.1"
 
@@ -36,6 +36,6 @@ jobs:
         uses: SamKirkland/FTP-Deploy-Action@4.3.3
         with:
           ftp-server: ftp.prayashshrestha.com.np
-          ftp-username: kathmandudaytrips-admin-dev@kathmandudaytrips-admin.alagpath.com
+          ftp-username: admin@kathmandudaytrips-admin.alagpath.com
           ftp-password: ${{ secrets.PRODUCTION_KATHMANDUDAYTRIPS }}
           local-dir: build/
