@@ -27,7 +27,7 @@ jobs:
       - name: Run install and build script
         run: |
           npm install
-          strapi build
+          npm run build --production
         env:
           CI: false
 
