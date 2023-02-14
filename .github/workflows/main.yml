@@ -19,8 +19,13 @@ jobs:
       - uses: actions/checkout@v2
 
       # Runs a single command using the runners shell
-      - name: Run react build script
-        run: npm install & npm run build
+      - name: Run install script
+        run: npm install
+        env:
+          CI: false
+
+      - name: Run  build script
+        run: npm run build
         env:
           CI: false
 
