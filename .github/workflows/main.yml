@@ -24,7 +24,7 @@ jobs:
           node-version: "16.17.1"
 
       # Runs a single command using the runners shell
-      - name: Run install script
+      - name: Run install and build script
         run: |
           npm install
           npm run build
@@ -39,3 +39,6 @@ jobs:
           username: admin@kathmandudaytrips-admin.alagpath.com
           password: ${{ secrets.PRODUCTION_KATHMANDUDAYTRIPS }}
           local-dir: build/
+          protocol: ftps
+          port: 21
+          dry-run: true
